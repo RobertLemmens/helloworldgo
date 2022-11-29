@@ -1,0 +1,26 @@
+specVersion: 0.34.0
+name: hellotest
+runtime: go
+registry: ""
+image: ""
+imageDigest: ""
+created: 2022-11-29T18:31:10.251447+01:00
+invocation:
+  format: http
+build:
+  buildpacks:
+  - paketo-buildpacks/go-dist
+  - ghcr.io/boson-project/go-function-buildpack:tip
+  builder: ""
+  buildEnvs: []
+run:
+  volumes: []
+  envs: []
+deploy:
+  namespace: ""
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness
