@@ -7,12 +7,9 @@ imageDigest: ""
 created: 2022-11-29T18:31:10.251447+01:00
 invocation:
   format: http
-build:
-  buildpacks:
-  - paketo-buildpacks/go-dist
-  - ghcr.io/boson-project/go-function-buildpack:tip
-  builder: ""
-  buildEnvs: []
+build: git
+git:
+  url: https://github.com/RobertLemmens/helloworldgo.git
 run:
   volumes: []
   envs: []
